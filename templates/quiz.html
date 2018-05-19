@@ -1,0 +1,21 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>{{ username }}</h1>
+
+<h4>{{ question.number }}.</h2>
+
+<p>{{ question.question }}</p>
+
+<p>{{ question.choices }}</p>
+
+<h4>{{ wrong_guesses }}</h4>
+
+<form method="POST">
+    <label for="guess">GUESS:</label>
+    <input type="text" id="guess" name="guess">
+    <button>Make a Guess</button>
+</form>
+
+{{ score }}
+
+{% endblock %}
