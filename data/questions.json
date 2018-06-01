@@ -1,26 +1,23 @@
- [
-        {
-            "index": 0,
-            "number": 1,
-            "question": "What is the capital of the UK?",
-            "choices": ["Paris", "London", "Berlin", "Oslo"],
-            "guesses": 3,
-            "answer": "London"
-            },
-        {
-            "index": 1,
-            "number": 2,
-            "question": "What is the capital of the France?",
-            "choices": ["Paris", "London", "Berlin", "Oslo"],
-            "guesses": 3,
-            "answer": "Paris"
-            },
-        {
-            "index": 2,
-            "number": 3,
-            "question": "What is the capital of the Germany?",
-            "choices": ["Paris", "London", "Berlin", "Oslo"],
-            "guesses": 3,
-            "answer": "Berlin"
-            }
+[
+    {
+        "index": 0,
+        "number": 1,
+        "question": "What is the capital of the UK?",
+        "choices": ["Paris", "London", "Berlin", "Oslo"],
+        "answer": "London"
+        },
+    {
+        "index": 1,
+        "number": 2,
+        "question": "What is the capital of the France?",
+        "choices": ["Paris", "London", "Berlin", "Oslo"],
+        "answer": "Paris"
+        },
+    {
+        "index": 2,
+        "number": 3,
+        "question": "What is the capital of the Germany?",
+        "choices": ["Paris", "London", "Berlin", "Oslo"],
+        "answer": "Berlin"
+        }
     ]
