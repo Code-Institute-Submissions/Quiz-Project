@@ -2,9 +2,21 @@
 
 <form method="POST">
     <label for="username">Username:</label>
-    <input type="text" id="username" name="username">
+    <input type="text" id="username" name="username" autocomplete="False">
     <button>Go to Quiz</button>
 </form>
-    
+
+{{ users }}
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class="flashes">
+        {% for message in messages %}
+        <li>{{ message }} </li>    
+        {% endfor %}
+    </ul>
+    {% endif %}
+{% endwith %}
+
 {% endblock %}
         

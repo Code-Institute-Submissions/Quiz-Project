@@ -1,6 +1,24 @@
 {% extends 'base.html' %} {% block content %}
 
 <h1>Quiz Complete </h1>
-    
+
+<h4>{{ username }} scored {{ score }} out of {{ no_of_questions }}</h4>
+
+<table>
+    <tr>
+    <th>Postion</th>
+    <th>Player</th>
+    <th>Score</th>
+    </tr>
+{% for user in leaderboard %}
+    <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.score }}</td>
+    </tr>
+{% endfor %}
+</table>
+
+
 {% endblock %}
         

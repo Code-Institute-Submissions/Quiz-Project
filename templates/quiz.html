@@ -8,11 +8,13 @@
 
 <p>{{ question.choices }}</p>
 
+<h4>{{ guesses }}</h4>
+
 <h4>{{ wrong_guesses }}</h4>
 
 <form method="POST">
     <label for="guess">GUESS:</label>
-    <input type="text" id="guess" name="guess">
+    <input type="text" id="guess" name="guess" autocomplete="False">
     <button>Make a Guess</button>
 </form>
 
