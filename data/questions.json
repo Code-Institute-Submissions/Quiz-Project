@@ -2,22 +2,143 @@
     {
         "index": 0,
         "number": 1,
-        "question": "What is the capital of the UK?",
-        "choices": ["Paris", "London", "Berlin", "Oslo"],
-        "answer": "London"
+        "question": "What is the capital of the Austria?",
+        "choices": ["Paris", "Vienna", "Prague", "Venice"],
+        "answer": "Vienna"
         },
     {
         "index": 1,
         "number": 2,
-        "question": "What is the capital of the France?",
-        "choices": ["Paris", "London", "Berlin", "Oslo"],
-        "answer": "Paris"
+        "question": "Where is Bern the capital of?",
+        "choices": ["Germany", "Belgium", "Croatia", "Switzerland"],
+        "answer": "Switzerland"
         },
     {
         "index": 2,
         "number": 3,
-        "question": "What is the capital of the Germany?",
-        "choices": ["Paris", "London", "Berlin", "Oslo"],
-        "answer": "Berlin"
+        "question": "Where is Nova Scotia?",
+        "choices": ["Usa", "Uk", "Canada", "Australia"],
+        "answer": "Canada"
+        },
+    {
+        "index": 3,
+        "number": 4,
+        "question": "What US state is Atlanta located in?",
+        "choices": ["Alabama", "Arkansas", "Georgia", "Louisiana"],
+        "answer": "Georgia"
+        },
+    {
+        "index": 4,
+        "number": 5,
+        "question": "Which city is the capital of Hungary?",
+        "choices": ["Budapest", "Bucharest", "Sofia", "Minsk"],
+        "answer": "Budapest"
+        },
+    {
+        "index": 5,
+        "number": 6,
+        "question": "How many litres of water does it take to make one egg?",
+        "choices": ["10", "56", "144", "200"],
+        "answer": "200"
+        },
+    {
+        "index": 6,
+        "number": 7,
+        "question": "How many tons of carbon are absorbed by 1 tree in its lifetime?",
+        "choices": ["1", "3", "6", "10"],
+        "answer": "1"
+        },
+    {
+        "index": 7,
+        "number": 8,
+        "question": "How many calories on average are in a Big Mac?",
+        "choices": ["240", "410", "560", "755"],
+        "answer": "560"
+        },
+    {
+        "index": 8,
+        "number": 9,
+        "question": "How many calories on average does 30 minutes of running burn?",
+        "choices": ["295", "345", "470", "520"],
+        "answer": "295"
+        },
+    {
+        "index": 9,
+        "number": 10,
+        "question": "How much caffeine is a large coffee shop coffee in 'mg'?",
+        "choices": ["90", "130", "240", "300"],
+        "answer": "240"
+        },
+    {
+        "index": 10,
+        "number": 11,
+        "question": "What cocktail do you get if you mix cranberry, orange liqueur and vodka?",
+        "choices": ["Cosmopolitan", "Margarita", "Screwdriver", "Daiquiri"],
+        "answer": "Cosmopolitan"
+        
+        },
+    {
+        "index": 11,
+        "number": 12,
+        "question": "What salad dressing do you get if you mix buttermilk, cottage cheese, chives, garlic and parmesan?",
+        "choices": ["Vinaigrette", "Caesar", "Catalina", "Ranch"],
+        "answer": "Ranch"
+        },
+    {
+        "index": 12,
+        "number": 13,
+        "question": "What is the main ingredient in a White Russian?",
+        "choices": ["Vodka", "Whiskey", "Tequila", "Brandy"],
+        "answer": "Vodka"
+        },
+    {
+        "index": 13,
+        "number": 14,
+        "question": "What word is missing from this famous cult movie quote 'They call it a *blank* with cheese.'?",
+        "choices": ["Burger", "Whopper", "Royale", "Patty"],
+        "answer": "Royale"
+        
+        },
+    {
+        "index": 14,
+        "number": 15,
+        "question": "How much did Avenger: Infinity War make on opening night to the closest million $s?",
+        "choices": ["110", "143", "257", "312"],
+        "answer": "257"
+        },
+    {
+        "index": 15,
+        "number": 16,
+        "question": "What word is missing from this famous movie quote 'I love the smell of *blank* in the morning.'?",
+        "choices": ["Coffee", "Doughnuts", "Napalm", "Smoke"],
+        "answer": "Napalm"
+        },
+    {
+        "index": 16,
+        "number": 17,
+        "question": "What specific creature does Indiana Jones hate?",
+        "choices": ["Scorpions", "Snakes", "Spiders", "Cockroaches"],
+        "answer": "Snakes"
+        },
+    {
+        "index": 17,
+        "number": 18,
+        "question": "What year was Gladiator first released?",
+        "choices": ["1998", "2000", "2001", "2003"],
+        "answer": "2000"
+        },
+    {
+        "index": 18,
+        "number": 19,
+        "question": "What bird is associated with Han Solo’s “Millenium” ship?",
+        "choices": ["Eagle", "Sparrow", "Hawk", "Falcon"],
+        "answer": "Falcon"
+        },
+    {
+        "index": 19,
+        "number": 20,
+        "question": "Who is the Brown Wizard from the Hobbit?",
+        "choices": ["Beorn", "Radagast", "Thranduil", "Mithrandir"],
+        "answer": "Radagast"
         }
-    ]
+        ]
