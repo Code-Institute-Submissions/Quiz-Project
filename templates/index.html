@@ -1,22 +1,33 @@
 {% extends 'base.html' %} {% block content %}
 
-<form method="POST">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" autocomplete="False">
-    <button>Go to Quiz</button>
-</form>
-
-{{ users }}
-
-{% with messages = get_flashed_messages() %}
-    {% if messages %}
-    <ul class="flashes">
-        {% for message in messages %}
-        <li>{{ message }} </li>    
-        {% endfor %}
-    </ul>
-    {% endif %}
-{% endwith %}
-
+<div class="container">
+    <div class="row">
+        <p>Welcome to the Quiz Of All Things! Please make a start by entering your Player Name below and Go to the Quiz when ready!</p>
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <form method="POST">
+                <div class="control-group">
+                    <div class="form-group">
+                        <label>Player Name</label>
+                        <input type="text" class="form-control" placeholder="Ready!" id="username" name="username" autocomplete="False" required data-validation-required-message="Please enter your name.">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <br>
+                <div id="success"></div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Go to Quiz</button>
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                        <div class="flashes">
+                            {% for message in messages %}
+                            <p>{{ message }}</p> 
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    {% endwith %}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}
-        

@@ -1,24 +1,27 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1>Quiz Complete </h1>
+<h1>Leaderboard</h1>
 
-<h4>{{ username }} scored {{ score }} out of {{ no_of_questions }}</h4>
-
-<table>
-    <tr>
-    <th>Postion</th>
-    <th>Player</th>
-    <th>Score</th>
-    </tr>
-{% for user in leaderboard %}
-    <tr>
-        <td>{{ loop.index }}</td>
-        <td>{{ user.username }}</td>
-        <td>{{ user.score }}</td>
-    </tr>
-{% endfor %}
-</table>
-
+<div class="table-responsive-md">
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Postion</th>
+                <th scope="col">Player</th>
+                <th scope="col">Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in leaderboard %}
+                <tr>
+                    <th scope="row">{{ loop.index }}</th>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.score }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
 
 {% endblock %}
         

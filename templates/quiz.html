@@ -1,23 +1,57 @@
 {% extends 'base.html' %} {% block content %}
+<div class="d-flex justify-content-between quiz">
+    <div>
+        <h5>Question {{ question.number }}/{{ no_of_questions }}</h5>
+    </div>
+    <div>
+        <h5>{{ username }}</h5>
+    </div>
+</div>
 
-<h1>{{ username }}</h1>
+<div class="d-flex justify-content-center quiz">
+    <p>{{ question.question }}</p>
+</div>
 
-<h4>{{ question.number }}.</h2>
+<div class="d-flex justify-content-center">
+    {% for choice in question.choices %}
+    <div class="choices">
+        <p>{{ choice }}</p>
+    </div>
+    {% endfor %}
+</div>
 
-<p>{{ question.question }}</p>
+<div class="d-flex justify-content-between">
+    <div class="quiz">
+        <p>Wrong Guesses:</p>
+        <p class="guesses">{{ wrong_guesses }}</p>
+    </div>
+    <div class="">
+        <p>Guesses Left: {{ guesses }}</p>
+    </div>
+</div>
 
-<p>{{ question.choices }}</p>
+<div class="d-flex justify-content-center">
+    <form method="POST">
+        <div class="control-group">
+            <div class="form-group">
+                <textarea class="form-control" placeholder="Guess!" id="guess" name="guess" rows=1 cols=1 required></textarea>
+            </div>
+        </div>
+            <div class="form-group">
+            <button type="submit" class="btn btn-primary">Make a Guess</button>
+        </div>    
+    </form>
+</div>
 
-<h4>{{ guesses }}</h4>
-
-<h4>{{ wrong_guesses }}</h4>
-
-<form method="POST">
-    <label for="guess">GUESS:</label>
-    <input type="text" id="guess" name="guess" autocomplete="False">
-    <button>Make a Guess</button>
-</form>
-
-{{ score }}
-
+<div class="d-flex justify-content-center">
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="flashes">
+            {% for message in messages %}
+            <p>{{ message }}</p>    
+            {% endfor %}
+        </div> 
+        {% endif %}
+    {% endwith %}
+</div>
 {% endblock %}
