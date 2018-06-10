@@ -1,5 +1,57 @@
+body {
+    background-color: #D5DBDB;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+.main_content {
+    padding: 1.5rem 1rem;
+}
+
+.content {
+    border: 20px double #34495E;
+}
+
+.header_text, .flashes {
+    padding: 1rem;
+}
+
+.quiz {
+    padding: 1rem 0;
+}
+
+#question {
+    border: 5px solid #34495E;
+    border-radius: 10px;
+}
+
 .choices {
     margin: 0 1rem;
+}
+
+.btn-primary {
+    background-color: #34495E;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    color: #fff;
+    background-color: #4C76A2 !important;
+    border-color: #4C76A2 !important;
+}
+
+footer {
+    padding: 0;
+}
+
+header.masthead {
+    margin-bottom: 0;
+}
+
+header.masthead .overlay {
+    background-image: url(img/question_mark.jpg);
+    background-size: contain;
 }
 
 header.masthead .page-heading,
