@@ -1,26 +1,32 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1>Leaderboard</h1>
+<div class="container main_content">
+    <div class="row content">
+        <div class="col-lg-10 col-md-10 mx-auto">            
+            <h2 class="quiz">Leaderboard</h2>
 
-<div class="table-responsive-md">
-    <table class="table table-hover table-bordered">
-        <thead>
-            <tr>
-                <th scope="col">Postion</th>
-                <th scope="col">Player</th>
-                <th scope="col">Score</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for user in leaderboard %}
-                <tr>
-                    <th scope="row">{{ loop.index }}</th>
-                    <td>{{ user.username }}</td>
-                    <td>{{ user.score }}</td>
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+            <div class="table-responsive-md quiz">
+                <table class="table table-hover table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Postion</th>
+                            <th scope="col">Player</th>
+                            <th scope="col">Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for user in leaderboard %}
+                            <tr>
+                                <th scope="row">{{ loop.index }}</th>
+                                <td>{{ user.username }}</td>
+                                <td>{{ user.score }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
 
 {% endblock %}

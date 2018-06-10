@@ -1,57 +1,61 @@
 {% extends 'base.html' %} {% block content %}
-<div class="d-flex justify-content-between quiz">
-    <div>
-        <h5>Question {{ question.number }}/{{ no_of_questions }}</h5>
-    </div>
-    <div>
-        <h5>{{ username }}</h5>
-    </div>
-</div>
 
-<div class="d-flex justify-content-center quiz">
-    <p>{{ question.question }}</p>
-</div>
-
-<div class="d-flex justify-content-center">
-    {% for choice in question.choices %}
-    <div class="choices">
-        <p>{{ choice }}</p>
-    </div>
-    {% endfor %}
-</div>
-
-<div class="d-flex justify-content-between">
-    <div class="quiz">
-        <p>Wrong Guesses:</p>
-        <p class="guesses">{{ wrong_guesses }}</p>
-    </div>
-    <div class="">
-        <p>Guesses Left: {{ guesses }}</p>
-    </div>
-</div>
-
-<div class="d-flex justify-content-center">
-    <form method="POST">
-        <div class="control-group">
-            <div class="form-group">
-                <textarea class="form-control" placeholder="Guess!" id="guess" name="guess" rows=1 cols=1 required></textarea>
+<div class="container main_content">
+    <div class="row content">
+        <div class="col-lg-10 col-md-10 mx-auto">            
+            <div class="d-flex justify-content-between header_text">
+                <div>
+                    <h5>Question {{ question.number }}/{{ no_of_questions }}</h5>
+                </div>
+                <div>
+                    <h5>{{ username }}</h5>
+                </div>
+            </div>
+            
+            <div id="question" class="d-flex justify-content-center quiz">
+                <p class="px-3">{{ question.question }}</p>
+            </div>
+            
+            <div class="d-flex justify-content-center quiz">
+                {% for choice in question.choices %}
+                <div class="choices">
+                    <p>{{ choice }}</p>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <div class="d-flex justify-content-between">
+                <div class="quiz">
+                    <p>Wrong Guesses:</p>
+                    <p>{{ wrong_guesses }}</p>
+                </div>
+                <div class="">
+                    <p>Guesses Left: {{ guesses }}</p>
+                </div>
+            </div>
+            
+            <div class="d-flex justify-content-center">
+                <form method="POST">
+                    <div class="control-group">
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Guess!" id="guess" name="guess" rows=1 cols=1 required></textarea>
+                        </div>
+                    </div>
+                        <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Make a Guess</button>
+                    </div>    
+                </form>
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                <div class="flashes">
+                    {% for message in messages %}
+                    <p>{{ message }}</p>    
+                    {% endfor %}
+                </div> 
+                {% endif %}
+                {% endwith %}
             </div>
         </div>
-            <div class="form-group">
-            <button type="submit" class="btn btn-primary">Make a Guess</button>
-        </div>    
-    </form>
-</div>
-
-<div class="d-flex justify-content-center">
-    {% with messages = get_flashed_messages() %}
-        {% if messages %}
-        <div class="flashes">
-            {% for message in messages %}
-            <p>{{ message }}</p>    
-            {% endfor %}
-        </div> 
-        {% endif %}
-    {% endwith %}
+    </div>
 </div>
 {% endblock %}
