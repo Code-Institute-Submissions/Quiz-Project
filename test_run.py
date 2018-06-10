@@ -5,6 +5,15 @@ class test_quiz(unittest.TestCase):
     
     # Test suite
     
+    def test_username(self):
+        
+        # Test that the username is added to userlist
+        
+        run.add_user("testSuite")
+        userlist = run.get_userlist()
+        
+        self.assertIn("testSuite", userlist)
+        
     def test_get_questions(self):
         
         # Test to get questions from question file
@@ -61,12 +70,11 @@ class test_quiz(unittest.TestCase):
         self.assertEqual(choices, ["Paris", "Vienna", "Prague", "Venice"])
         self.assertNotEqual(choices, ["Germany", "Belgium", "Croatia", "Switzerland"])
         
-    
-    def test_right_answer(self):
+    def test_scoreboard(self):
         
-        # Test that right answer to question will increase score by 1
+        # Test that the scoreboard is correct
         
-        answer = run.get_right_answer(0)
-        guess = "Vienna"
+        run.add_to_scoreboard("testSuite", 12)
+        leaderboard = run.get_scoreboard()
         
-        self.assertEqual(answer, guess)
+        self.assertIn({"username":"testSuite", "score": 12}, leaderboard)
