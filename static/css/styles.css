@@ -28,7 +28,7 @@ p {
 }
 
 .choices {
-    margin: 0 1rem;
+    margin: 0 2rem;
 }
 
 .btn-primary {
@@ -42,7 +42,7 @@ p {
 }
 
 footer {
-    padding: 0;
+    padding: 1rem 0;
 }
 
 header.masthead {
@@ -57,18 +57,6 @@ header.masthead .overlay {
 header.masthead .page-heading,
 header.masthead .post-heading,
 header.masthead .site-heading {
-    padding: 120px 0;
+    padding: 100px 0;
     color: white;
-}
-
-@media only screen and (min-width: 768px) {
-    header.masthead .page-heading,
-    header.masthead .post-heading,
-    header.masthead .site-heading {
-        padding: 120px 0;
-    }
-    
-    .choices {
-        margin: 0 2rem;
-    }
 }
