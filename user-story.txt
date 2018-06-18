@@ -1,0 +1,47 @@
+    User Story
+
+INDEX
+
+    As a User I would want:
+    
+        - to be excited by the homepage of the game
+        
+        - to use my own username for the game so its unique to me
+        
+        - to be told how the game works and any rules
+
+QUIZ
+
+    As a User I would want:
+        
+        - to be personalized to me
+        
+        - to be entertained by the questions
+        
+        - to have a range of different questions
+        
+        - to know what question I am in the game
+        
+        - to see the answers clearly
+        
+        - to know what answers I have picked so I don't pick it twice
+        
+        - to know how many guesses I have for a question
+
+
+LEADERBOARD
+
+    As a User I would want:
+        
+        - my score to be recorded and to be able to view my score
+        
+        - to be able to compare my score to other users
+        
+        - to be able to see the score of my last attempt to compare to my highscores
+
+
+
+
+
+
+

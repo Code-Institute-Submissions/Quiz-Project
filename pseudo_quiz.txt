@@ -1,0 +1,66 @@
+import os
+import json
+from flask import Flask, redirect, render_template, request, flash
+
+app Flask name
+
+define get questions
+    questions equals []
+    open "questions" to read as quiz questions
+        questions is equal to json load "quiz questions"
+    return questions
+    
+define answer questions
+    guess equals request form "guess" upper
+    guesses equals 3
+    number of questions equals length of questions
+    
+    for obj in questions
+    each wipe wrong answers list
+        if guess is equal answer
+            score increases by 1
+        elif guess is not equal answer
+            guesses decreases by 1
+            if guesses is 0 continue to next
+        elif guess is in option list
+            add guess to wrong answers list
+        else 
+            display invalid guess 
+    endfor
+    
+    append "score" to "scoreboard" with "username" and "score"
+    
+    redirect to leaderboard 
+            
+app route /index methods GET, POST
+define index
+    if request method equals POST
+        write request form "username", to file "players" on new line
+        return redirect to quiz with "username"
+    return render template for index
+    
+app route /"username" methods GET, POST
+define quiz with username
+    
+    questions equals get questions
+    
+    if request method equals POST
+        score equals 0
+        answer questions
+    
+    return render template for quiz, "username", "questions"
+
+app route /leaderboard 
+define score
+    scores equals []
+    
+    open "scoreboard" to read as player scores
+        scores equals player scores read
+    return scores
+    
+    display last score for "username"
+    
+    scores ordered highest first 
+    display top 5 in table with "username" and "score"
+    
+app.run(host=os.getenv('IP'), port=int(os.getenv('PORT')), debug=True)
