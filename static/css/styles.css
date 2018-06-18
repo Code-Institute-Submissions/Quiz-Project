@@ -18,7 +18,7 @@ p {
     padding: 1rem;
 }
 
-.quiz {
+.quiz, footer {
     padding: 1rem 0;
 }
 
@@ -39,10 +39,6 @@ p {
     color: #fff;
     background-color: #4C76A2 !important;
     border-color: #4C76A2 !important;
-}
-
-footer {
-    padding: 1rem 0;
 }
 
 header.masthead {
