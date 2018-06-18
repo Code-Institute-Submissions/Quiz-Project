@@ -54,12 +54,10 @@ def get_question(question_number):
     
     # Gets "Question" for quiz using "Question Number"
     
-    question = []
-    with open("data/questions.json", "r") as quiz_data:
-        questions = json.load(quiz_data)
-        for obj in questions:
-            if obj["index"] == question_number:
-                question = obj
+    questions = get_questions()
+    for obj in questions:
+        if obj["index"] == question_number:
+            question = obj
             
     return question
     
