@@ -16,9 +16,9 @@
                 <p class="px-3">{{ question.question }}</p>
             </div>
             
-            <div class="d-flex justify-content-center quiz">
+            <div class="d-flex flex-wrap justify-content-center quiz">
                 {% for choice in question.choices %}
-                <div class="choices">
+                <div class="choices quiz">
                     <p>{{ choice }}</p>
                 </div>
                 {% endfor %}
@@ -29,7 +29,16 @@
                     <p>Wrong Guesses:</p>
                     <p>{{ wrong_guesses }}</p>
                 </div>
-                <div class="">
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                <div class="flashes">
+                    {% for message in messages %}
+                    <p>{{ message }}</p>    
+                    {% endfor %}
+                </div> 
+                {% endif %}
+                {% endwith %}
+                <div class="quiz">
                     <p>Guesses Left: {{ guesses }}</p>
                 </div>
             </div>
@@ -45,17 +54,22 @@
                         <button type="submit" class="btn btn-primary">Make a Guess</button>
                     </div>    
                 </form>
-                {% with messages = get_flashed_messages() %}
-                {% if messages %}
-                <div class="flashes">
-                    {% for message in messages %}
-                    <p>{{ message }}</p>    
-                    {% endfor %}
-                </div> 
-                {% endif %}
-                {% endwith %}
+                
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    
+    $( document ).ready(function() {
+        
+        $( ".choices" ).click(function() {
+            var index = $( ".choices" ).index( this );
+            var choices = {{ question.choices | safe }}
+            $("#guess").text(choices[index])
+        });
+    });
+    
+</script>
 {% endblock %}

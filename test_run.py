@@ -78,3 +78,6 @@ class test_quiz(unittest.TestCase):
         leaderboard = run.get_scoreboard()
         
         self.assertIn({"username":"testSuite", "score": 12}, leaderboard)
+        
+if __name__ == '__main__':
+    unittest.main()

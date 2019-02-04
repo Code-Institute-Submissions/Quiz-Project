@@ -177,6 +177,7 @@ def quiz(username, question_number, score, guesses):
             if guess != answer:
                 wrong_guess(username, guess, choices, wrong_guesses)
                 guesses -= 1
+                flash("Incorrect!")
                 return redirect(url_for("quiz", username=username,
                                                 question_number=question_number,
                                                 score=score,
@@ -184,6 +185,7 @@ def quiz(username, question_number, score, guesses):
                                                 wrong_guesses=wrong_guesses))
             else:
                 score += 1
+                flash("Correct!")
                 if question_number == (no_of_questions - 1):
                     add_to_scoreboard(username, score)
                     return redirect(url_for("quiz_end", username=username,
@@ -201,6 +203,7 @@ def quiz(username, question_number, score, guesses):
                                                         score=score))
             else:
                 wrong_guesses_open(username)
+                flash("Next Question!")
                 return redirect(url_for("quiz", username=username,
                                                 score=score,
                                                 question_number=question_number+1,

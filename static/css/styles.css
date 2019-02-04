@@ -19,7 +19,7 @@ p {
 }
 
 .quiz, footer {
-    padding: 1rem 0;
+    padding: 1rem 0.5rem;
 }
 
 #question {
@@ -28,7 +28,12 @@ p {
 }
 
 .choices {
-    margin: 0 2rem;
+    margin: 0 1rem;
+}
+
+.choices:hover {
+    background-color: #34495E;
+    color: #FFF;
 }
 
 .btn-primary {
