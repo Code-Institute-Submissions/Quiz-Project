@@ -16,6 +16,7 @@ p {
 
 .header_text, .flashes {
     padding: 1rem;
+    text-align: center;
 }
 
 .quiz, footer {

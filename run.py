@@ -172,6 +172,7 @@ def quiz(username, question_number, score, guesses):
     wrong_guesses = get_wrong_guesses(username)
    
     if request.method == "POST":
+        # Checks guesses are above 1 to continue guessing question 
         if guesses != 1:
             guess = request.form["guess"].title()
             if guess != answer:
@@ -186,28 +187,50 @@ def quiz(username, question_number, score, guesses):
             else:
                 score += 1
                 flash("Correct!")
+                # End of questions 
                 if question_number == (no_of_questions - 1):
                     add_to_scoreboard(username, score)
                     return redirect(url_for("quiz_end", username=username,
                                                             score=score))
+                # Continue to Next Question
                 else:
                     wrong_guesses_open(username)
                     return redirect(url_for("quiz", username=username,
                                                     score=score,
                                                     question_number=question_number+1,
                                                     guesses=3))
+        # Last guess 
         else:
-            if question_number == (no_of_questions - 1):
-                add_to_scoreboard(username, score)
-                return redirect(url_for("quiz_end", username=username,
-                                                        score=score))
-            else:
-                wrong_guesses_open(username)
+            guess = request.form["guess"].title()
+            if guess != answer:
                 flash("Next Question!")
-                return redirect(url_for("quiz", username=username,
-                                                score=score,
-                                                question_number=question_number+1,
-                                                guesses=3))
+                # End of questions 
+                if question_number == (no_of_questions - 1):
+                    add_to_scoreboard(username, score)
+                    return redirect(url_for("quiz_end", username=username,
+                                                            score=score))
+                # Continue to Next Question
+                else:
+                    wrong_guesses_open(username)
+                    return redirect(url_for("quiz", username=username,
+                                                    score=score,
+                                                    question_number=question_number+1,
+                                                    guesses=3))
+            else:
+                score += 1
+                flash("Correct!")
+                # End of questions
+                if question_number == (no_of_questions - 1):
+                    add_to_scoreboard(username, score)
+                    return redirect(url_for("quiz_end", username=username,
+                                                            score=score))
+                # Continue to Next Question
+                else:
+                    wrong_guesses_open(username)
+                    return redirect(url_for("quiz", username=username,
+                                                    score=score,
+                                                    question_number=question_number+1,
+                                                    guesses=3))
            
     return render_template("quiz.html", username=username,
                                         question=question,
