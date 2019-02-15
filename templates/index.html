@@ -2,8 +2,20 @@
 
 <div class="container main_content">
     <div class="row content">
-        <p class="header_text">Welcome to the Quiz Of All Things! Please make a start by entering your Player Name below and Go to the Quiz when ready!</p>
         <div class="col-lg-8 col-md-10 mx-auto">
+            <h4 class="header_text">Welcome to the Quiz Of All Things!</h4>
+            <p class="header_text">Please make a start by entering your Player Name below and Go to the Quiz when ready!</p>
+        </div>
+        <div class="col-lg-8 col-md-10 mx-auto">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                <div class="flashes">
+                    {% for message in messages %}
+                    <p>{{ message }}</p> 
+                    {% endfor %}
+                </div>
+                {% endif %}
+            {% endwith %}
             <form class="quiz" method="POST">
                 <div class="control-group">
                     <div class="form-group">
@@ -15,16 +27,17 @@
                 <div class="form-group quiz">
                     <button type="submit" class="btn btn-primary">Go to Quiz</button>
                 </div>
-                {% with messages = get_flashed_messages() %}
-                    {% if messages %}
-                    <div class="flashes">
-                        {% for message in messages %}
-                        <p>{{ message }}</p> 
-                        {% endfor %}
-                    </div>
-                    {% endif %}
-                {% endwith %}
             </form>
+        </div>
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <h5>How to Play</h5>
+            <p class="header_text">
+                When you start the quiz you will be shown a question with choices,
+                select an answer by clicking on it then guess when ready. You get
+                3 guesses and you will be able to see any wrong guesses. When you
+                have done all the questions you can see the leaderboard. If you 
+                leave without doing all questions <strong>your progress will be lost.</strong>
+            </p>
         </div>
     </div>
 </div>
