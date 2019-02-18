@@ -28,9 +28,9 @@ As a User I would want:
 
 
 Mock ups can be viewed for each page below:
-- [Index](/mock_ups/Index.jpg/)
-- [Quiz](/mock_ups/Quiz.jpg/)
-- [Leaderboard](/mock_ups/Leaderboard.jpg/)
+- [Index](/mock-ups/Index.jpg)
+- [Quiz](/mock-ups/Quiz.jpg/)
+- [Leaderboard](/mock-ups/Leaderboard.jpg/)
 
 ## Features
 
@@ -70,7 +70,7 @@ provides UX:
 
 I developed the Quiz using Test Driven Development approach to build the Quiz 
 in stages and testing each stage. For the testing I used Python Unit Test Framework
-with a Test suite which can be found in [test_run.py](/test_run.py/)
+with a Test suite which can be found in [test_run.py](/tests/test_run.py/)
 
 The tests can be run by using the following command:
 
@@ -78,7 +78,7 @@ The tests can be run by using the following command:
     2. python3 test_run.py
 
 As I developed the Quiz I did manual tests to check the Quiz was working as
-designed and displaying correctly. They can be found in [User Tests](/tests/user_test.md/).
+designed and displaying correctly. They can be found in [User Tests](/tests/user_tests.md/).
 
 I have also tested my project for responsiveness and on different browsers which
 is detailed in [Browser Tests](/tests/browser_tests.pdf/)
