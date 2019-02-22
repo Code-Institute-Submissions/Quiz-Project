@@ -1,5 +1,4 @@
 {% extends 'base.html' %} {% block content %}
-
 <div class="container main_content">
     <div class="row content">
         <div class="col-lg-10 col-md-10 mx-auto">            
@@ -8,20 +7,17 @@
                     <h1>You Completed the Quiz!</h1>
                 </div>
             </div>
-            
             <div class="d-flex justify-content-center quiz">
                 <div>
                     <h3>Well Done!</h3>
                     <h4 class="quiz">{{ username }} scored {{ score }} out of {{ no_of_questions }}</h4>
                 </div>
             </div>
-            
             <div class="d-flex justify-content-center quiz">
                 <div>
                     <h5>Head Over to the Leaderboard and check out where you rank against other competitors!</h5>
                 </div>
             </div>
-            
             <div class="d-flex justify-content-center quiz pb-5">
                 <a href="{{ url_for('leaderboard') }}">
                     <button class="btn btn-primary">Leaderboard</button>
@@ -30,5 +26,4 @@
         </div>
     </div>
 </div>
-
 {% endblock %}
